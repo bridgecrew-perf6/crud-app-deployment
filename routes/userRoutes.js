@@ -5,18 +5,18 @@ module.exports = {
   name: 'CRUD',
   register: (server, options) => {
     const routes = [
-    {
-      method: 'GET',
-      path: '/',
-      config: {
-        auth: false,
-        description: 'Home Page',
-        tags: ['api'],
-        handler: ()=>{
-          return "Hello World! Welcome to Users Application!";
+      {
+        method: 'GET',
+        path: '/',
+        config: {
+          auth: false,
+          description: 'Home Page',
+          tags: ['api'],
+          handler: () => {
+            return 'Hello World! Welcome to Users Application!'
+          },
         },
       },
-    },
       {
         method: 'POST',
         path: '/api/user/createUser',
@@ -27,11 +27,11 @@ module.exports = {
           handler: userController.createHandler,
           validate: {
             payload: joi.object().keys({
-              name: joi.string().label("Name").required(),
-              password: joi.string().label("Password").required(),
-              email: joi.string().allow('').label("Email"),
-          }),
-        },
+              name: joi.string().label('Name').required(),
+              password: joi.string().label('Password').required(),
+              email: joi.string().allow('').label('Email'),
+            }),
+          },
         },
       },
       {
