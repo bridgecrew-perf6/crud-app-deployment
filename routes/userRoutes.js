@@ -13,7 +13,7 @@ module.exports = {
           description: 'Home Page',
           tags: ['api'],
           handler: () => {
-            return "Hello Hupi! Welcome to Saan's Application!"
+            return "Hello World! Welcome to Saan's Application!"
           },
         },
       },
